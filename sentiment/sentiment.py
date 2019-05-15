@@ -1,14 +1,16 @@
+# import twitter keys and tokens
+from config import consumer_key, consumer_secret, access_token, access_token_secret
 import tweepy
 
 import json
 from textblob import TextBlob
+import time
 from elasticsearch import Elasticsearch
 
-# import twitter keys and tokens
-from config import consumer_key, consumer_secret, access_token, access_token_secret
+time.sleep(12)
 
 # create instance of elasticsearch
-es = Elasticsearch([{'host': 'elasticsearch', 'port': '9200'}])
+es = Elasticsearch([{"host": "elasticsearch", "port": "9200"}])
 
 
 class TweetStreamListener(tweepy.StreamListener):
@@ -41,7 +43,7 @@ class TweetStreamListener(tweepy.StreamListener):
         # print sentiment
         print(sentiment)
 
-        # add text and sentiment info to elasticsearch
+        # add text and sentiment info to elasticsearch db
         es.index(index="sentiment",
                  doc_type="tweet",
                  body={"author": tweet_data["user"]["screen_name"],
