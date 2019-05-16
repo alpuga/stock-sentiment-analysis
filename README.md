@@ -1,5 +1,7 @@
 # Stock Sentiment Analysis
 
+<img src="https://user-images.githubusercontent.com/37851662/57881975-9b210680-77f0-11e9-8975-ddcdcb5b9f7c.png" alt="alt text">
+
 > Analyzing sentiment on particular stocks on Twitter.
 > The specific example I used was Tesla.
 > Could be used for sentiment analysis on any particular topic, I used it for stocks.
