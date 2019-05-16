@@ -20,6 +20,8 @@ access_token_secret = "YOUR_ACCESS_TOKEN_SECRET"
 
 ## Quick Start
 
+Make sure to have [Docker](https://www.docker.com/) installed.
+
 ```bash
 $ docker-compose up
 ```
